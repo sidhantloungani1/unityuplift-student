@@ -9,6 +9,7 @@ class CustomBtn extends StatelessWidget {
   final double? width;
   final Function()? onPressed;
   final Color? textColor;
+  final double? fontSize;
   const CustomBtn(
       {super.key,
       required this.text,
@@ -17,6 +18,7 @@ class CustomBtn extends StatelessWidget {
       this.height,
       this.width,
       this.textColor,
+      this.fontSize,
       });
 
   @override
@@ -27,7 +29,10 @@ class CustomBtn extends StatelessWidget {
       color: color ?? AppColors.primaryColor,
       height: height ?? 55,
       minWidth: width ?? 250,
-      child: Text(text, style: TextStyle(color: textColor,fontSize:18),),
+      shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(20),
+      ),
+      child: Text(text, style: TextStyle(color: textColor,fontSize: fontSize ?? 18),),
     );
   }
 }

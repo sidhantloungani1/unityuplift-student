@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:student/screens/ViewDetails.dart';
 import 'package:student/utils/app_colors.dart';
+import '../components/custom_btn.dart';
 import 'drawer_widget.dart';
 
 class ApplicationStatusScreen extends StatelessWidget {
@@ -13,7 +15,7 @@ class ApplicationStatusScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          // Add the text "Application Status" here
+          
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 16),
             child: Text(
@@ -26,18 +28,21 @@ class ApplicationStatusScreen extends StatelessWidget {
           ),
 
           buildApplicationCard(
+            context,
             'Scholarship Application 1',
             'In Progress',
             Colors.blue,
           ),
-          SizedBox(height: 24), // Increased gap
+          SizedBox(height: 24), 
           buildApplicationCard(
+            context,
             'Scholarship Application 2',
             'Accepted',
             Colors.green,
           ),
-          SizedBox(height: 24), // Increased gap
+          SizedBox(height: 24),
           buildApplicationCard(
+            context,
             'Scholarship Application 3',
             'Rejected',
             Colors.red,
@@ -47,7 +52,7 @@ class ApplicationStatusScreen extends StatelessWidget {
     );
   }
 
-  Widget buildApplicationCard(String title, String status, Color statusColor) {
+  Widget buildApplicationCard(BuildContext context, String title, String status, Color statusColor) {
     return Card(
       elevation: 5,
       shadowColor: Colors.grey.withOpacity(0.5),
@@ -84,7 +89,7 @@ class ApplicationStatusScreen extends StatelessWidget {
               ),
               child: Text(
                 status,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 12,
                   fontWeight: FontWeight.bold,
@@ -96,22 +101,23 @@ class ApplicationStatusScreen extends StatelessWidget {
           Positioned(
             bottom: 8,
             left: 8,
-            child: ElevatedButton(
-              onPressed: () {
-               
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.primaryColor,
-                elevation: 0, 
-                minimumSize: Size(80, 40), 
+            child: CustomBtn(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ViewDetailsScreen(),
+                    ),
+                  );
+                },
+                color: AppColors.primaryColor,
+                textColor: AppColors.secondaryColor,
+                height: 30,
+                width: 100.0,
+                text: 'Details',
+                fontSize: 14,
               ),
-              child: const Text(
-                'Details',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
+            
           ),
         ],
       ),

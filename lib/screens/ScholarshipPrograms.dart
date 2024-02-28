@@ -3,6 +3,7 @@ import 'package:student/screens/ViewDetails.dart';
 import 'package:student/screens/apply.dart';
 import 'package:student/utils/app_colors.dart';
 import 'drawer_widget.dart';
+import '../../components/custom_btn.dart';
 
 class ScholarshipProgramsScreen extends StatelessWidget {
   @override
@@ -39,7 +40,7 @@ class ScholarshipProgramsScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              child: TextField(
+              child: const TextField(
                 decoration: InputDecoration(
                   hintText: 'Search for scholarships...',
                   prefixIcon: Icon(Icons.search),
@@ -111,31 +112,24 @@ class ScholarshipCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              ElevatedButton(
+              CustomBtn(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>  ApplyForScholarshipPage(),
+                      builder: (context) => const ApplyForScholarshipPage(),
                     ),
                   );
                 },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-                child: const Text(
-                  'Apply',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: AppColors.secondaryColor,
-                  ),
-                ),
+                color: AppColors.primaryColor,
+                textColor: AppColors.secondaryColor,
+                height: 35,
+                width: 100.0,
+                text: 'Apply',
+                fontSize: 14,
               ),
               const SizedBox(width: 8),
-              ElevatedButton(
+              CustomBtn(
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -144,15 +138,12 @@ class ScholarshipCard extends StatelessWidget {
                     ),
                   );
                 },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 244, 245, 244),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-                child: const Text(
-                  'View Details',
-                ),
+                color: const Color.fromARGB(255, 230, 225, 225),
+                textColor: AppColors.primaryColor,
+                height: 35,
+                width: 100.0,
+                text: 'View Details',
+                fontSize: 14,
               ),
             ],
           ),

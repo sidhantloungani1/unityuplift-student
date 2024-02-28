@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:student/screens/auth/Login_Screen.dart';
 import 'package:student/screens/auth/Registration.dart';
@@ -6,20 +8,37 @@ import '../../components/custom_btn.dart';
 
 // import '../../components/drawer.dart';
 
-
 class MainPage extends StatelessWidget {
   //final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  
-  
+    
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: Stack(
+        children: [
+          // Background image
+          Image.asset(
+            'assets/images/welcome.jpeg', // Replace with your image path
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+          ),
+          // Blurred overlay
+          BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+            child: Container(
+              color: Colors.black.withOpacity(0.4),
+              width: double.infinity,
+              height: double.infinity,
+            ),
+          ),
+          
+      Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/logo.png'),
-              const SizedBox(height: 10),
+            Image.asset('assets/images/logo1.png'),
+              const SizedBox(height: 15),
             CustomBtn(
                 onPressed: () {
                   Navigator.push(
@@ -60,6 +79,8 @@ class MainPage extends StatelessWidget {
             
           ],
         ),
+      ),
+        ],
       ),
     );
   }

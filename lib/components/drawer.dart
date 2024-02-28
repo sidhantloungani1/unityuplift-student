@@ -41,14 +41,15 @@ class DrawerWidget extends StatelessWidget {
             leading: const Icon(Icons.history),
             title: const Text('History'),
             onTap: () {
-              // Handle History button click
+             
+             
             },
           ),
           ListTile(
             leading: const Icon(Icons.dashboard),
             title: const Text('Dashboard'),
             onTap: () {
-              // Handle Dashboard button click
+            
             },
           ),
           const Divider(),
@@ -56,14 +57,14 @@ class DrawerWidget extends StatelessWidget {
             leading: Icon(Icons.settings),
             title: Text('Settings'),
             onTap: () {
-              // Handle Settings button click
+              
             },
           ),
           ListTile(
             leading: Icon(Icons.logout),
             title: Text('Logout'),
             onTap: () {
-              // Handle Logout button click
+              
             },
           ),
         ],
