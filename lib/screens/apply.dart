@@ -158,14 +158,14 @@ class _ApplyForScholarshipPageState extends State<ApplyForScholarshipPage> {
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 5),
-              Text(
+              const Text(
                 'Description',
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.normal),
               ),
               const SizedBox(height: 10),
               TextFormField(
                 maxLines: 5,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Write here',
                   hintText: 'Write details here',
                   border: OutlineInputBorder(

@@ -87,21 +87,6 @@ class RegistrationScreen extends StatelessWidget {
                   const SizedBox(
                     width: 100,
                   ),
-                  InkWell(
-                    onTap: () {
-                      // Add functionality for adding email field
-                    },
-                    child: const Text('Email'),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  InkWell(
-                    onTap: () {
-                      // Add functionality for adding phone field
-                    },
-                    child: const Text('Phone'),
-                  ),
                 ],
               ),
               const SizedBox(

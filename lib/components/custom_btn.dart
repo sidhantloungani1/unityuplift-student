@@ -27,10 +27,10 @@ class CustomBtn extends StatelessWidget {
       onPressed: onPressed,
       textColor: color?? AppColors.secondaryColor,
       color: color ?? AppColors.primaryColor,
-      height: height ?? 55,
+      height: height ?? 60,
       minWidth: width ?? 250,
       shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(10),
       ),
       child: Text(text, style: TextStyle(color: textColor,fontSize: fontSize ?? 18),),
     );

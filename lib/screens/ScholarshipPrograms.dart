@@ -25,7 +25,7 @@ class ScholarshipProgramsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // New Search Section
+            // Search
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               decoration: BoxDecoration(

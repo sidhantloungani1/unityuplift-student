@@ -7,14 +7,7 @@ class ProcessCompleteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // actions: [
-        //   IconButton(
-        //     icon: const Icon(Icons.account_circle),
-        //     onPressed: () {
-        //       // Handle profile icon click
-        //     },
-        //   ),
-        // ],
+        
       ),
       body: Center(
         child: Padding(
@@ -28,7 +21,7 @@ class ProcessCompleteScreen extends StatelessWidget {
                 height: 200,
               ),
               const SizedBox(height: 20),
-              Text(
+              const Text(
                 'Your application is in process. You will be notified!',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black87),
                 textAlign: TextAlign.center,

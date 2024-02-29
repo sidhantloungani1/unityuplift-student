@@ -33,14 +33,14 @@ class ApplicationStatusScreen extends StatelessWidget {
             'In Progress',
             Colors.blue,
           ),
-          SizedBox(height: 24), 
+          const SizedBox(height: 24), 
           buildApplicationCard(
             context,
             'Scholarship Application 2',
             'Accepted',
             Colors.green,
           ),
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
           buildApplicationCard(
             context,
             'Scholarship Application 3',
@@ -68,12 +68,12 @@ class ApplicationStatusScreen extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 16), // Increased gap
+                const SizedBox(height: 16), // Increased gap
               ],
             ),
           ),

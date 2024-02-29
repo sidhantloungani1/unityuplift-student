@@ -10,7 +10,6 @@ class welcomescreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          // Half area with picture and curved styling
           Expanded(
             flex: 3,
             child: Container(
@@ -28,9 +27,8 @@ class welcomescreen extends StatelessWidget {
             ),
             
           ),
-          // Half area with text, bold text, and navigation dots
+          
           Column(
-            
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(

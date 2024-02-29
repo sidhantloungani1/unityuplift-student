@@ -8,7 +8,7 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-  int? selectedNotificationOption; // Change type to int?
+  int? selectedNotificationOption; 
 
   bool enableDarkMode = false;
   bool enableBiometricAuthentication = false;
@@ -17,7 +17,6 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // Remove the title from the app bar
         // title: Text('App Settings'),
       ),
       body: Padding(
@@ -25,7 +24,7 @@ class _SettingsPageState extends State<SettingsPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Heading
+
             Text(
               'App Settings',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -51,7 +50,7 @@ class _SettingsPageState extends State<SettingsPage> {
                           });
                         },
                       ),
-                      Text('On'),
+                      const Text('On'),
                       Radio(
                         value: 1,
                         groupValue: selectedNotificationOption,
@@ -61,15 +60,15 @@ class _SettingsPageState extends State<SettingsPage> {
                           });
                         },
                       ),
-                      Text('Off'),
+                      const Text('Off'),
                     ],
                   ),
                 ),
               ],
             ),
 
-            // Divider
-            Divider(height: 20, color: Colors.grey),
+
+          const Divider(height: 20, color: Colors.grey),
 
             // Appearance Settings Section
             _buildSection(
@@ -110,9 +109,8 @@ class _SettingsPageState extends State<SettingsPage> {
               ],
             ),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
-            // Save Button
             CustomBtn(
                 onPressed: () {
                   Navigator.push(
@@ -138,9 +136,9 @@ class _SettingsPageState extends State<SettingsPage> {
       children: [
         Text(
           title,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         ...settings,
       ],
     );

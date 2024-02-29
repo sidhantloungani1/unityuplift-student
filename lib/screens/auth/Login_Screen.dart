@@ -32,11 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Logo in the center
               Image.asset('assets/images/logo.png'),
-              const SizedBox(height: 10),
-
-              // Heading of login on the left
               const Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -45,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
 
-              // Email and Password text fields
+              // Email and Password 
               const SizedBox(
                 height: 16.0,
               ),
@@ -62,7 +58,8 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 8.0,
               ),
-           //   CustomTextfield(text: 'Username'),
+
+
               const TextField(
                 decoration: InputDecoration(
                     labelText: 'Password',
@@ -73,19 +70,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     filled: true,
                     contentPadding: EdgeInsets.all(12.0)),
               ),
-              // Forget password text on the left
+
               const SizedBox(height: 10.0),
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
                   onPressed: () {
-                    // Add forget password logic here
+                    
                   },
                   child: const Text('Forget Password?'),
                 ),
               ),
 
-              // Login button in the center
+              // Login button 
               const SizedBox(height: 10.0),
               CustomBtn(
                 onPressed: () {
@@ -106,32 +103,32 @@ class _LoginScreenState extends State<LoginScreen> {
               
               const SizedBox(height: 10),
               const Text('Or connect with'),
-              // Facebook, Google, Twitter buttons
+
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  IconButton(
+                  LinkedButton(
+                    icon: FontAwesomeIcons.facebook,
+                    color: Colors.blueAccent,
                     onPressed: () {},
-                    icon: const Icon(
-                      FontAwesomeIcons.facebook,
-                      size: 30, // Adjust the size as needed
-                    ),
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      FontAwesomeIcons.google,
-                      size: 30, 
-                    ),
+                  const SizedBox(
+                    width: 5,
                   ),
-                  IconButton(
+                  LinkedButton(
+                    icon: FontAwesomeIcons.google,
+                    color: Colors.red,
                     onPressed: () {},
-                    icon: const Icon(
-                      FontAwesomeIcons.twitter,
-                      size: 30, 
-                    ),
-                  )
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  LinkedButton(
+                    icon: FontAwesomeIcons.twitter,
+                    color: Colors.lightBlue,
+                    onPressed: () {},
+                  ),
                 ],
               ),
 
@@ -141,7 +138,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   const CustomText(
                     title: 'Don\'t have an account',
                   ),
-                  // const Text("Don't have an account?"),
+              
+              
                   TextButton(
                     onPressed: () {
                       Navigator.push(
@@ -155,6 +153,45 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+class LinkedButton extends StatelessWidget {
+  final IconData icon;
+  final Color color;
+  final VoidCallback? onPressed;
+
+  const LinkedButton({
+    Key? key,
+    required this.icon,
+    required this.color,
+    this.onPressed,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onPressed,
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          color: Colors.transparent,
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(
+            color: color,
+            width: 2,
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Icon(
+            icon,
+            size: 30,
+            color: color,
           ),
         ),
       ),

@@ -15,7 +15,7 @@ class ProfilePage extends StatelessWidget {
                 color: Colors.white,
                 onPressed: () {
                   Navigator.of(context)
-                      .pop(); // Navigate back to the previous page
+                      .pop(); 
                 },
               ),
               title:
@@ -54,7 +54,7 @@ class ProfilePage extends StatelessWidget {
                             ),
                             child: ClipOval(
                               child: Image.asset(
-                                'assets/images/profile.jpg', // Replace with your asset image
+                                'assets/images/profile.jpg', 
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -72,18 +72,7 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Positioned(
-                  //   top: 16.0,
-                  //   right: 16.0,
-                  //   child: IconButton(
-                  //     icon: Icon(Icons.edit),
-                  //     color: Colors.white,
-                  //     onPressed: () {
-                  //       // Handle edit profile button tap
-                  //       // You can navigate to an edit profile page or show a modal here
-                  //     },
-                  //   ),
-                  // ),
+                 
                 ],
               ),
             ),

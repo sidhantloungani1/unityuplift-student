@@ -6,7 +6,6 @@ class ScholarshipHistoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // Remove the title from the app bar
         // title: Text('Scholarship History'),
       ),
       body: Column(
@@ -85,7 +84,7 @@ class ScholarshipHistoryPage extends StatelessWidget {
             SizedBox(height: 8),
             Text(
               'Receiver: $receiver',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 color: Colors.white,
               ),

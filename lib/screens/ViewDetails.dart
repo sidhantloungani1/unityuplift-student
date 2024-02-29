@@ -25,7 +25,7 @@ class ViewDetailsScreen extends StatelessWidget {
               ),
               
             ),
-            const Divider(height: 1, color: Colors.grey), // Divider between sections
+            
             const Padding(
               padding: EdgeInsets.all(16.0),
               child: Column(
@@ -56,22 +56,21 @@ class ViewDetailsScreen extends StatelessWidget {
                     value:
                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                   ),
-                  // Add more ScholarshipDetailSection widgets as needed
+                  
                 ],
               ),
             ),
             
-            const SizedBox(height: 16),
+            const SizedBox(height: 7),
             const Wrap(
-              spacing: 8.0, // Adjust the spacing between tags
-              runSpacing: 8.0, // Adjust the run spacing (spacing between lines)
+              spacing: 8.0, // spacing b/w tags
+              runSpacing: 5.0, // spsacing b/w lines
               children: [
                 ScholarshipTagButton(icon: Icons.school, label: 'Education'),
                 ScholarshipTagButton(icon: Icons.group, label: 'Community'),
                 ScholarshipTagButton(icon: Icons.star, label: 'Merit-Based'),
                 ScholarshipTagButton(icon: Icons.language, label: 'Language'),
                 ScholarshipTagButton(icon: Icons.sports_soccer, label: 'Sports'),
-                // Add more ScholarshipTagButton widgets as needed
               ],
             ),
             const SizedBox(height: 16),
@@ -84,7 +83,7 @@ class ViewDetailsScreen extends StatelessWidget {
                    Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ApplyForScholarshipPage(),
+                      builder: (context) => const ApplyForScholarshipPage(),
                     ),
                   );
                 },
